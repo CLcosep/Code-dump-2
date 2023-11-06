@@ -200,6 +200,35 @@ When to Use arrays. When to use Obects.
 -You should use objects when you want the element names to be strings (text)
 - You should use arrays when you want the element names to be numbers
 --------------------------------------------------------------------------------------
+
+- JS new Array() -
+
+const points = new Array();
+const points = [];
+Both create a new empty array
+
+const points = new Array(40,21,10,1);
+const points = [40, 21,10,1];
+both create a new array containing 6 numbers
+
+common error
+const points = [40]; <-- create an array with one element
+is not the same as
+const points = new Array(40); <-- create an array with 40 undefined elements 
+--------------------------------------------------------------------------------------
+
+- How to Recognize an Array - 
+
+solutions:
+Array.isArray():
+const fruits = ["Banna", "oragnge", "apple"];
+document.getElementById("demo").innerHTML = Array.isArray(fruits);
+
+solution2:
+instanceof operator
+
+const fruits = ["Banna", "oragnge", "apple"];
+document.getElementById("demo").innerHTML = fruits instanceof Array;
 */
 
 const fruits = ["bananan", "apple", "pear"];
